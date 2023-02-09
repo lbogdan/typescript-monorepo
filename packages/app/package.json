@@ -1,0 +1,16 @@
+{
+  "name": "@typescript-monorepo/app",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@typescript-monorepo/lib": "^0.0.1"
+  },
+  "type": "module",
+  "scripts": {
+    "clean": "rm -fr dist",
+    "build": "tsc -b",
+    "watch": "tsc-watch -b --preserveWatchOutput --onSuccess 'node dist/index.js'"
+  }
+}

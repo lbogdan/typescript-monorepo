@@ -1,0 +1,22 @@
+{
+  "name": "workspace",
+  "version": "0.0.1",
+  "repository": "https://github.com/lbogdan/typescript-monorepo.git",
+  "author": "Bogdan Luca <luca.bogdan@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^18.13.0",
+    "tsc-watch": "^6.0.0",
+    "typescript": "^4.9.5"
+  },
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "clean": "yarn workspaces run clean",
+    "build:app": "yarn workspace @typescript-monorepo/app build",
+    "build:lib": "yarn workspace @typescript-monorepo/lib build",
+    "watch:app": "yarn workspace @typescript-monorepo/app watch"
+  }
+}
